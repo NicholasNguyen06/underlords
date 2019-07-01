@@ -1,0 +1,27 @@
+{
+    "Heroes": [{
+            "name": "Puck",
+            "class1": "Dragon",
+            "class2": "Mage",
+            "imgsrc": "/static/puck.png"
+        },
+        {
+            "name": "Viper",
+            "class1": "Dragon",
+            "class2": "Assassin",
+            "imgsrc": "/static/puck.png"
+        },
+        {
+            "name": "Dragon Knight",
+            "class1": "Dragon",
+            "class2": "Knight",
+            "imgsrc": "/static/puck.png"
+        },
+        {
+            "name": "Crystal Maide",
+            "class1": "Human",
+            "class2": "Mage",
+            "imgsrc": "/static/puck.png"
+        }
+    ]
+}

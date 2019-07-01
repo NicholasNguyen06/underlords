@@ -3,7 +3,11 @@ import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
 import HeroCard from '../components/herocard'
+import HeroList from '../components/herolist'
+import data from '../static/heroes.json'
+
 const Home = () => (
   <div>
     <Head title="Home" />
@@ -14,9 +18,6 @@ const Home = () => (
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
-
-      <HeroCard/>
-
 
       <div className="row">
         <Link href="https://github.com/zeit/next.js#getting-started">
@@ -42,7 +43,9 @@ const Home = () => (
         </Link>
       </div>
     </div>
-
+    <Grid container>
+    <HeroList data={data}/>
+    </Grid>
     <style jsx>{`
       .hero {
         width: 100%;
