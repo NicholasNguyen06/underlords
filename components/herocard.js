@@ -7,8 +7,17 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import HeroTypes from "./herotypes";
 
 class HeroCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: props.name,
+      classes: props.classes,
+      imgsrc: props.imgsrc
+    };
+  }
 
   render() {
     return (
@@ -18,8 +27,14 @@ class HeroCard extends React.Component {
             <Typography gutterBottom variant="h5" component="h2">
               Puck
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              <img src={this.props.imgsrc} />
+            <Typography variant="body2" color="textSecondary" component="span">
+              <img
+                src={
+                  "/static/" +
+                  this.state.name.replace(/\W/g, "").toLowerCase() +
+                  ".jpg"
+                }
+              />
             </Typography>
           </CardContent>
           <style jsx>{`
@@ -31,33 +46,12 @@ class HeroCard extends React.Component {
         </CardActionArea>
         <CardActions>
           <Grid container>
-            <Grid items xs={12}>
-              <Typography variant="body2" color="textSecondary" component="p">
-                <Grid container>
-                  <Grid items xs={6}>
-                    <img src="/static/dragon.jpg" />
-                  </Grid>
-                  <Grid items xs={6}>
-                    <img src="/static/mage.jpg" />
-                  </Grid>
-                </Grid>
-              </Typography>
-            </Grid>
-            <Grid items xs={12}>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
-            </Grid>
+            <Typography variant="body2" color="textSecondary" component="span">
+              <Grid container>
+                  <HeroTypes classes={this.state.classes} />
+              </Grid>
+            </Typography>
           </Grid>
-          <style jsx>{`
-            img {
-              height: 50px;
-              width: 50px;
-            }
-          `}</style>
         </CardActions>
       </Card>
     );

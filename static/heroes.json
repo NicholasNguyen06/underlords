@@ -1,27 +1,19 @@
 {
     "Heroes": [{
-            "name": "Puck",
-            "class1": "Dragon",
-            "class2": "Mage",
-            "imgsrc": "/static/puck.png"
+            "name": "Abaddon",
+            "classes": ["Heartless", "Knight"]
         },
         {
-            "name": "Viper",
-            "class1": "Dragon",
-            "class2": "Assassin",
-            "imgsrc": "/static/puck.png"
+            "name": "Alchemist",
+            "classes": ["Scrappy", "Warlock"]
         },
         {
-            "name": "Dragon Knight",
-            "class1": "Dragon",
-            "class2": "Knight",
-            "imgsrc": "/static/puck.png"
+            "name": "Anti-mage",
+            "classes": ["Elusive", "Demon Hunter"]
         },
         {
-            "name": "Crystal Maide",
-            "class1": "Human",
-            "class2": "Mage",
-            "imgsrc": "/static/puck.png"
+            "name": "Arc Warden",
+            "classes": ["Primordial", "Shaman"]
         }
     ]
 }
