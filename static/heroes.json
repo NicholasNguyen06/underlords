@@ -14,6 +14,114 @@
         {
             "name": "Arc Warden",
             "classes": ["Primordial", "Shaman"]
+        },
+        {
+            "name": "Axe",
+            "classes": ["Brawny", "Warrior"]
+        },
+        {
+            "name": "Batrider",
+            "classes": ["Troll", "Knight"]
+        },
+        {
+            "name": "Beastmaster",
+            "classes": ["Brawny", "Hunter"]
+        },
+        {
+            "name": "Bloodseeker",
+            "classes": ["Human", "Assassin"]
+        },
+        {
+            "name": "Bounty Hunter",
+            "classes": ["Scrappy", "Assassin"]
+        },
+        {
+            "name": "Chaos Knight",
+            "classes": ["Demon", "Knight"]
+        },
+        {
+            "name": "Clockwerk",
+            "classes": ["Scrappy", "Inventor"]
+        },
+        {
+            "name": "Crystal Maiden",
+            "classes": ["Human", "Mage"]
+        },
+        {
+            "name": "Disruptor",
+            "classes": ["Brawny", "Shaman"]
+        },
+        {
+            "name": "Doom",
+            "classes": ["Demon", "Warrior"]
+        },
+        {
+            "name": "Dragon Knight",
+            "classes": ["Human", "Dragon", "Knight"]
+        },
+        {
+            "name": "Drow Ranger",
+            "classes": ["Heartless", "Hunter"]
+        },
+        {
+            "name": "Enchantress",
+            "classes": ["Savage", "Druid"]
+        },
+        {
+            "name": "Enigma",
+            "classes": ["Primordial", "Warlock"]
+        },
+        {
+            "name": "Gyrocopter",
+            "classes": ["Deadeye", "Inventor"]
+        },
+        {
+            "name": "Juggernaut",
+            "classes": ["Brawny", "Warrior"]
+        },
+        {
+            "name": "Keeper Of The Light",
+            "classes": ["Human", "Mage"]
+        },
+        {
+            "name": "Kunkka",
+            "classes": ["Human", "Warrior"]
+        },
+        {
+            "name": "Lich",
+            "classes": ["Heartless", "Mage"]
+        },
+        {
+            "name": "Lina",
+            "classes": ["Human", "Mage"]
+        },
+        {
+            "name": "Lone Druid",
+            "classes": ["Scrappy", "Druid"]
+        },
+        {
+            "name": "Luna",
+            "classes": ["Elusive", "Knight"]
+        },
+        {
+            "name": "Lycan",
+            "classes": ["Human", "Scrappy", "Warrior"]
+        },
+        {
+            "name": "Medusa",
+            "classes": ["Scaled", "Hunter"]
+        },
+        {
+            "name": "Mirana",
+            "classes": ["Elusive", "Hunter"]
+        },
+        {
+            "name": "Morphling",
+            "classes": ["Primordial", "Assassin"]
+        },
+        {
+            "name": "Nature's Prophet",
+            "classes": ["Elusive", "Druid"]
         }
     ]
 }

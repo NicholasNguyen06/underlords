@@ -25,7 +25,7 @@ class HeroCard extends React.Component {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Puck
+              {this.state.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="span">
               <img
