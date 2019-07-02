@@ -12,11 +12,7 @@ import HeroTypes from "./herotypes";
 class HeroCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: props.name,
-      classes: props.classes,
-      imgsrc: props.imgsrc
-    };
+    
   }
 
   render() { 
@@ -25,13 +21,13 @@ class HeroCard extends React.Component {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {this.state.name}
+              {this.props.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="span">
               <img
                 src={
                   "/static/" +
-                  this.state.name.replace(/\W/g, "").toLowerCase() +
+                  this.props.name.replace(/\W/g, "").toLowerCase() +
                   ".jpg"
                 }
               />
@@ -48,7 +44,7 @@ class HeroCard extends React.Component {
           <Grid container>
             <Typography variant="body2" color="textSecondary" component="span">
               <Grid container>
-                  <HeroTypes classes={this.state.classes} />
+                  <HeroTypes classes={this.props.classes} />
               </Grid>
             </Typography>
           </Grid>
