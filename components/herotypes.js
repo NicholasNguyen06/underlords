@@ -5,7 +5,7 @@ function HeroTypes(props) {
   return Object.values(props.classes).map((type, index) => {
     return (
       <Grid key={index} item xs>
-        <Button>
+        <Button onClick={(e) => props.onClick(type)}>
           <img
             src={"/static/" + type.replace(/\W/g, "").toLowerCase() + ".jpg"}
           />

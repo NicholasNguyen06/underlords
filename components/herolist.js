@@ -2,8 +2,11 @@ import React from "react";
 import HeroCard from "./herocard";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
+import GridList from "@material-ui/core/GridList";
 import data from "../static/heroes.json";
+import AllianceButtons from "./alliancebuttons";
 
 class HeroList extends React.Component {
   constructor(props) {
@@ -11,6 +14,7 @@ class HeroList extends React.Component {
     this.state = {
       heroes: this.props.heroes.Heroes
     };
+    this.onClick = this.sortByClass.bind(this);
   }
 
   sortClick() {
@@ -19,9 +23,10 @@ class HeroList extends React.Component {
     });
   }
 
-  sortByClass(classType) {
-    const heroesList = this.state.heroes.filter(el => {
-      return el.classes.includes(classType);
+  sortByClass(type) {
+    console.log("click:" , type);
+    const heroesList = data.Heroes.filter(hero => {
+      return hero.classes.includes(type);
     });
     this.setState({
       heroes: heroesList
@@ -36,24 +41,22 @@ class HeroList extends React.Component {
             key={index}
             name={type.name}
             classes={type.classes}
+            onClick = {(e) => this.sortByClass(e)}
           />
         </Grid>
       );
     });
     return (
+      <Box>
       <Grid container>
-        <Grid item xs={12}>
-          <Grid item xs>
-            <Button onClick={e => this.sortClick(e)}>Sort</Button>
-          </Grid>
-          <Grid item xs>
-            <Button onClick={e => this.sortByClass("Brawny")}>
-              Sort Brawny
-            </Button>
-          </Grid>
-        </Grid>
-        {heroesList}
+            <AllianceButtons onClick= {(e) => this.sortByClass(e)} />
       </Grid>
+      <Grid>
+        <GridList cols={12} cellHeight={280}>
+          {heroesList}
+        </GridList>
+      </Grid>
+      </Box>
     );
   }
 }
