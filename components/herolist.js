@@ -14,7 +14,6 @@ class HeroList extends React.Component {
     this.state = {
       heroes: this.props.heroes.Heroes
     };
-    this.onClick = this.sortByClass.bind(this);
   }
 
   sortClick() {
@@ -23,7 +22,7 @@ class HeroList extends React.Component {
     });
   }
 
-  sortByClass(type) {
+  sortByClass = (type) => {
     console.log("click:" , type);
     const heroesList = data.Heroes.filter(hero => {
       return hero.classes.includes(type);
@@ -36,12 +35,12 @@ class HeroList extends React.Component {
   render() {
     var heroesList = Object.values(this.state.heroes).map((type, index) => {
       return (
-        <Grid key={index} item xs>
+        <Grid key={index} item xs={2}>
           <HeroCard
             key={index}
             name={type.name}
             classes={type.classes}
-            onClick = {(e) => this.sortByClass(e)}
+            onClick = {this.sortByClass}
           />
         </Grid>
       );
@@ -49,7 +48,9 @@ class HeroList extends React.Component {
     return (
       <Box>
       <Grid container>
-            <AllianceButtons onClick= {(e) => this.sortByClass(e)} />
+        <Grid item xs={6}>
+            <AllianceButtons onClick= {this.sortByClass} />
+            </Grid>
       </Grid>
       <Grid>
         <GridList cols={12} cellHeight={280}>

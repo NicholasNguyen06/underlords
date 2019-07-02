@@ -8,8 +8,8 @@ function AllianceButtons(props) {
   var allianceButtons = Object.values(alliances.alliances).map(
     (type, index) => {
       return (
-        <div key={index}>
-          <Button onClick={(e) => props.onClick(type)}>
+        <Grid key={index} item xs={1}>
+          <Button onClick={() => props.onClick(type)}>
             <img
               src={
                 "/static/" +
@@ -27,11 +27,23 @@ function AllianceButtons(props) {
               width: 50px;
             }
           `}</style>
-        </div>
+        </Grid>
       );
     }
   );
-  return <Grid item>{allianceButtons}</Grid>;
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <h2>Alliances</h2>
+        <style jsx>{`
+          h2 {
+            padding-left:15px;
+          }
+        `}</style>
+      </Grid>
+      {allianceButtons}
+    </Grid>
+  );
 }
 
 export default AllianceButtons;
