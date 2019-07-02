@@ -33,14 +33,6 @@ function AllianceButtons(props) {
   );
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <h2>Alliances</h2>
-        <style jsx>{`
-          h2 {
-            padding-left: 15px;
-          }
-        `}</style>
-      </Grid>
       <Grid item xs={1}>
         <Button onClick={() => props.onClick("undo")}>
             <Undo style={{ fontSize: 50 }}/>
