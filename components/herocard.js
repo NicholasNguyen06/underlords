@@ -19,7 +19,7 @@ class HeroCard extends React.Component {
     };
   }
 
-  render() {
+  render() { 
     return (
       <Card>
         <CardActionArea>
@@ -55,7 +55,7 @@ class HeroCard extends React.Component {
         </CardActions>
       </Card>
     );
-  }
+    }
 }
 
 export default HeroCard;

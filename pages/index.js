@@ -18,7 +18,7 @@ const Home = () => (
 
     </div>
     <Grid container>
-      <HeroList data={data} />
+      <HeroList heroes={data} />
     </Grid>
     <style jsx>{`
       .hero {
