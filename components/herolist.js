@@ -22,15 +22,20 @@ class HeroList extends React.Component {
     });
   }
 
-  sortByClass = (type) => {
-    console.log("click:" , type);
-    const heroesList = data.Heroes.filter(hero => {
-      return hero.classes.includes(type);
-    });
-    this.setState({
-      heroes: heroesList
-    });
-  }
+  sortByClass = type => {
+    if (type === "undo") {
+      this.setState({
+        heroes: data.Heroes
+      });
+    } else {
+      const heroesList = data.Heroes.filter(hero => {
+        return hero.classes.includes(type);
+      });
+      this.setState({
+        heroes: heroesList
+      });
+    }
+  };
 
   render() {
     var heroesList = Object.values(this.state.heroes).map((type, index) => {
@@ -40,23 +45,23 @@ class HeroList extends React.Component {
             key={index}
             name={type.name}
             classes={type.classes}
-            onClick = {this.sortByClass}
+            onClick={this.sortByClass}
           />
         </Grid>
       );
     });
     return (
       <Box>
-      <Grid container>
-        <Grid item xs={6}>
-            <AllianceButtons onClick= {this.sortByClass} />
-            </Grid>
-      </Grid>
-      <Grid>
-        <GridList cols={12} cellHeight={280}>
-          {heroesList}
-        </GridList>
-      </Grid>
+        <Grid container>
+          <Grid item xs={6}>
+            <AllianceButtons onClick={this.sortByClass} />
+          </Grid>
+        </Grid>
+        <Grid>
+          <GridList cols={12} cellHeight={280}>
+            {heroesList}
+          </GridList>
+        </Grid>
       </Box>
     );
   }

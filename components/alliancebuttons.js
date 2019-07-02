@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import alliances from "../static/alliances";
-
+import Undo from '@material-ui/icons/Undo';
 function AllianceButtons(props) {
   var allianceButtons = Object.values(alliances.alliances).map(
     (type, index) => {
@@ -37,9 +37,14 @@ function AllianceButtons(props) {
         <h2>Alliances</h2>
         <style jsx>{`
           h2 {
-            padding-left:15px;
+            padding-left: 15px;
           }
         `}</style>
+      </Grid>
+      <Grid item xs={1}>
+        <Button onClick={() => props.onClick("undo")}>
+            <Undo style={{ fontSize: 50 }}/>
+        </Button>
       </Grid>
       {allianceButtons}
     </Grid>
