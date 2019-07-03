@@ -8,24 +8,13 @@ import Grid from "@material-ui/core/Grid";
 import GridList from "@material-ui/core/GridList";
 import data from "../static/heroes.json";
 import AllianceButtons from "./alliancebuttons";
-import SearchIcon from '@material-ui/icons/Search';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
-
+import SearchHero from "./searchhero";
 class HeroList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       heroes: this.props.heroes.Heroes
     };
-  }
-
-  sortClick() {
-    this.setState({
-      heroes: this.state.heroes.length == 0 ? data.Heroes : []
-    });
   }
 
   sortByClass = type => {
@@ -39,6 +28,22 @@ class HeroList extends React.Component {
       });
       this.setState({
         heroes: heroesList
+      });
+    }
+  };
+
+  handleSearch = value => {
+    console.log(value);
+    if (value.length > 2) {
+      const heroesList = data.Heroes.filter(hero => {
+        return hero.classes.includes(value);
+      });
+      this.setState({
+        heroes: heroesList
+      });
+    } else {
+      this.setState({
+        heroes: data.Heroes
       });
     }
   };
@@ -71,17 +76,7 @@ class HeroList extends React.Component {
             <AllianceButtons onClick={this.sortByClass} />
           </Grid>
           <Grid item xs={6}>
-            <TextField
-              id="input-with-icon-textfield"
-              label="TextField"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                )
-              }}
-            />
+            <SearchHero onKeyUp={this.handleSearch} />
           </Grid>
         </Grid>
         <Grid>

@@ -5,7 +5,7 @@
         },
         {
             "name": "Alchemist",
-            "classes": ["Scrappy", "Warlock"]
+            "classes": ["Scrappy", "Warlocks"]
         },
         {
             "name": "Anti-mage",
@@ -69,7 +69,7 @@
         },
         {
             "name": "Enigma",
-            "classes": ["Primordial", "Warlock"]
+            "classes": ["Primordial", "Warlocks"]
         },
         {
             "name": "Gyrocopter",
@@ -122,6 +122,122 @@
         {
             "name": "Nature's Prophet",
             "classes": ["Elusive", "Druid"]
+        },
+        {
+            "name": "Necrophos",
+            "classes": ["Heartless", "Warlocks"]
+        },
+        {
+            "name": "Ogre Magi",
+            "classes": ["Blood Bound", "Mage"]
+        },
+        {
+            "name": "Omniknight",
+            "classes": ["Human", "Knight"]
+        },
+        {
+            "name": "Phantom Assassin",
+            "classes": ["Elusive", "Assassin"]
+        },
+        {
+            "name": "Puck",
+            "classes": ["Elusive", "Dragon", "Mage"]
+        },
+        {
+            "name": "Pudge",
+            "classes": ["Heartless", "Warrior"]
+        },
+        {
+            "name": "Queen Of Pain",
+            "classes": ["Demon", "Assassin"]
+        },
+        {
+            "name": "Razor",
+            "classes": ["Primordial", "Mage"]
+        },
+        {
+            "name": "Sand King",
+            "classes": ["Savage", "Assassin"]
+        },
+        {
+            "name": "Shadow Fiend",
+            "classes": ["Demon", "Warlocks"]
+        },
+        {
+            "name": "Shadow Shaman",
+            "classes": ["Troll", "Shaman"]
+        },
+        {
+            "name": "Slardar",
+            "classes": ["Scaled", "Warrior"]
+        },
+        {
+            "name": "Slark",
+            "classes": ["Scaled", "Assassin"]
+        },
+        {
+            "name": "Sniper",
+            "classes": ["Deadeye", "Hunter"]
+        },
+        {
+            "name": "Techies",
+            "classes": ["Scrappy", "Inventor"]
+        },
+        {
+            "name": "Templar Assassin",
+            "classes": ["Elusive", "Assassin"]
+        },
+        {
+            "name": "Terrorblade",
+            "classes": ["Demon", "Demon Hunter"]
+        },
+        {
+            "name": "Tidehunter",
+            "classes": ["Scaled", "Hunter"]
+        },
+        {
+            "name": "Timbersaw",
+            "classes": ["Scrappy", "Inventor"]
+        },
+        {
+            "name": "Tinker",
+            "classes": ["Scrappy", "Inventor"]
+        },
+        {
+            "name": "Tiny",
+            "classes": ["Primordial", "Warrior"]
+        },
+        {
+            "name": "Treant Protector",
+            "classes": ["Elusive", "Druid"]
+        },
+        {
+            "name": "Troll Warlord",
+            "classes": ["Troll", "Warrior"]
+        },
+        {
+            "name": "Tusk",
+            "classes": ["Savage", "Warrior"]
+        },
+        {
+            "name": "Venomancer",
+            "classes": ["Savage", "Warlocks"]
+        },
+        {
+            "name": "Viper",
+            "classes": ["Dragon", "Assassin"]
+        },
+        {
+            "name": "Warlock",
+            "classes": ["Blood Bound", "Warlocks"]
+        },
+        {
+            "name": "Windranger",
+            "classes": ["Elusive", "Hunter"]
+        },
+        {
+            "name": "Witch Doctor",
+            "classes": ["Troll", "Warlocks"]
         }
     ]
 }
