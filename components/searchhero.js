@@ -6,19 +6,28 @@ import { useState } from "react";
 class SearchHero extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      searchValue: ''
+    };
   }
-  
-  handleChange = () => {
 
-  }
-  
+  handleChange = event => {
+    var value = event.target.value;
+    this.setState({searchValue: value});
+    this.props.onInput(value);
+
+  };
+
   render() {
     return (
       <TextField
-        id="search-heroes"
-        name="search-heroes"
-        label="TextField"
+        id="standard-search"
+        name="standard-search"
+        label="Search field"
+        type="search"
+        margin="normal"
+        onChange={this.handleChange}
+        value={this.state.searchValue}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -26,9 +35,10 @@ class SearchHero extends React.Component {
             </InputAdornment>
           )
         }}
-        value={input}
-        onKeyUp={e => props.onKeyUp(e, e.target.value)}
       />
+      
     );
   }
 }
+
+export default SearchHero;

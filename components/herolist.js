@@ -33,10 +33,9 @@ class HeroList extends React.Component {
   };
 
   handleSearch = value => {
-    console.log(value);
-    if (value.length > 2) {
+    if (value.length > 0) {
       const heroesList = data.Heroes.filter(hero => {
-        return hero.classes.includes(value);
+        return hero.name.toUpperCase().includes(value.toUpperCase());
       });
       this.setState({
         heroes: heroesList
@@ -72,11 +71,11 @@ class HeroList extends React.Component {
               }
             `}</style>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <AllianceButtons onClick={this.sortByClass} />
           </Grid>
-          <Grid item xs={6}>
-            <SearchHero onKeyUp={this.handleSearch} />
+          <Grid item xs={12}>
+            <SearchHero onInput={this.handleSearch} />
           </Grid>
         </Grid>
         <Grid>
