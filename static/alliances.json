@@ -1,27 +1,168 @@
 {
-    "alliances": [
-        "Assassin",
-        "Blood-Bound",
-        "Brawny",
-        "Deadeye",
-        "Demon",
-        "Demon Hunter",
-        "Dragon",
-        "Druid",
-        "Elusive",
-        "Heartless",
-        "Human",
-        "Hunter",
-        "Inventor",
-        "Knight",
-        "Mage",
-        "Primordial",
-        "Savage",
-        "Scaled",
-        "Scrappy",
-        "Shaman",
-        "Troll",
-        "Warlock",
-        "Warrior"
+    "alliances": [{
+            "type": "Assassin",
+            "tiers": [
+                "(3) Assassins gain a 10% chance to Critical Hit for 300% Damage",
+                "(6) Assassins gain a 20% chance to Critical Hit for 400% Damage",
+                "(9) Assassins gain a 30% chance to Critical Hit for 500% Damage"
+            ]
+        },
+        {
+            "type": "Blood-Bound",
+            "tiers": [
+                "(2) When a Blood-Bound unit dies, all other Blood-Bound units deal +100% Attack Damage for the rest of the battle."
+            ]
+        },
+        {
+            "type": "Brawny",
+            "tiers": [
+                "(2) All Brawny units have their maximum HP increased by 200.",
+                "(4) All Brawny units have their maximum HP increased by 500."
+            ]
+        },
+        {
+            "type": "Deadeye",
+            "tiers": [
+                "(2) Deadeye units focus their attacks on the lowest-health enemy."
+            ]
+        },
+        {
+            "type": "Demon",
+            "tiers": [
+                "(1) Demon units gain +50% Pure Damage. Active when you have only one type of Demon unit on the board."
+            ]
+        },
+        {
+            "type": "Demon Hunter",
+            "tiers": [
+                "(1) Invalidate your opponent's Demon Alliance bonus.",
+                "(2) Invalidate your opponent's Demon Alliance bonus. Demon units gain +50% Pure Damage."
+            ]
+        },
+        {
+            "type": "Dragon",
+            "tiers": [
+                "(2) Dragon units start Combat with Full Mana, requires 2 units and unlocks an additional ability for each member of the Alliance."
+            ]
+        },
+        {
+            "type": "Druid",
+            "tiers": [
+                "(2) The lowest star ally Druid is upgraded a level.",
+                "(4) The 2 lowest star ally Druids are upgraded a level each."
+            ]
+        },
+        {
+            "type": "Elusive",
+            "tiers": [
+                "(3) Elusive units gain +20% Evasion.",
+                "(6) Elusive units gain +45% Evasion.",
+                "(9) Elusive units gain +75% Evasion."
+            ]
+        },
+        {
+            "type": "Heartless",
+            "tiers": [
+                "(2) Enemies suffer -5 Armor.",
+                "(4) Enemies suffer -10 Armor.",
+                "(6) Enemies suffer -20 Armor."
+            ]
+        },
+        {
+            "type": "Human",
+            "tiers": [
+                "(2) Human units gain a 20% Chance to Silence target for 4 seconds when attacking.",
+                "(4) Human units gain a 44% Chance to Silence target for 4 seconds when attacking.",
+                "(4) Human units gain a 44% Chance to Silence target for 4 seconds when attacking."
+            ]
+        },
+        {
+            "type": "Hunter",
+            "tiers": [
+                "(3) Hunters have a 20% chance of quickly performing 2 attacks.",
+                "(6) Hunters have a 35% chance of quickly performing 2 attacks"
+            ]
+        },
+        {
+            "type": "Inventor",
+            "tiers": [
+                "(2) Inventors gain +15 HP Regeneration",
+                "(4) Inventors gain +40 HP Regeneration"
+            ]
+        },
+        {
+            "type": "Knight",
+            "tiers": [
+                "(2) Knight units take 15% less physical and magic damage and an additional 15% when next to another knight.",
+                "(4) Knight units take 20% less physical and magic damage and an additional 20% when next to another knight. ",
+                "(6) Knight units take 30% less physical and magic damage and an additional 25% when next to another knight."
+            ]
+        },
+        {
+            "type": "Mage",
+            "tiers": [
+                "(3) Enemies suffer -40% Magic Resistance",
+                "(6) Enemies suffer -100% Magic Resistance"
+            ]
+        },
+        {
+            "type": "Primordial",
+            "tiers": [
+                "(2) When hit, Primordial units have a 30% chance to disarm melee attackers for 4 seconds. ",
+                "(4) When hit, Allies have a 30% chance to disarm melee attackers for 4 seconds."
+            ]
+        },
+        {
+            "type": "Savage",
+            "tiers": [
+                "(2) Allies gain + 10% Attack Damage.",
+                "(4) Allies gain + 25% Attack Damage.",
+                "(6) Allies gain + 45% Attack Damage."
+            ]
+        },
+        {
+            "type": "Scaled",
+            "tiers": [
+                "(2) Allies gain + 30% Magic Resistance.",
+                "(4) Allies gain + 50% Magic Resistance."
+            ]
+        },
+        {
+            "type": "Scrappy",
+            "tiers": [
+                "(3) A Random Ally is granted +9 Armor and +8 HP Regeneration. Armor and HP are doubled if you start the fight with fewer units than your opponent.",
+                "(6) Allies gain +9 Armor and +8 HP Regeneration. Armor and HP are doubled if you start the fight with fewer units than your opponent."
+
+            ]
+        },
+        {
+            "type": "Shaman",
+            "tiers": [
+                "(2) A Random Enemy is turned into a Frog for 6 seconds at the start of Combat."
+            ]
+        },
+        {
+            "type": "Troll",
+            "tiers": [
+                "(2) All Troll units gain +35 Attack Speed",
+                "(4) All Troll units gain +65 Attack Speed and other Allies gain +30 Attack Speed"
+            ]
+        },
+        {
+            "type": "Warlocks",
+            "tiers": [
+                "(2) Allies gain +15% Lifesteal",
+                "(4) Allies gain +30% Lifesteal",
+                "(6) Allies gain +50% Lifesteal"
+            ]
+        },
+        {
+            "type": "Warrior",
+            "tiers": [
+                "All Warriors gain +10 Armor",
+                "All Warriors gain +15 Armor",
+                "All Warriors gain +25 Armor"
+            ]
+        }
     ]
 }

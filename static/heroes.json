@@ -97,7 +97,7 @@
         },
         {
             "name": "Lone Druid",
-            "classes": ["Scrappy", "Druid"]
+            "classes": ["Savage", "Druid"]
         },
         {
             "name": "Luna",
@@ -105,7 +105,7 @@
         },
         {
             "name": "Lycan",
-            "classes": ["Human", "Scrappy", "Warrior"]
+            "classes": ["Human", "Savage", "Warrior"]
         },
         {
             "name": "Medusa",

@@ -19,7 +19,7 @@ class HeroCard extends React.Component {
       <Card>
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography variant="body1" gutterBottom>
               {this.props.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="span">
@@ -34,8 +34,8 @@ class HeroCard extends React.Component {
           </CardContent>
           <style jsx>{`
             img {
-              height: 100px;
-              width: 175px;
+              height: 75px;
+              width: 135px;
             }
           `}</style>
         </CardActionArea>
