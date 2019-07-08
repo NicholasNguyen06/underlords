@@ -26,10 +26,10 @@ class HeroCard extends React.Component {
             <Typography variant="body1" gutterBottom>
               {this.props.name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="span">
+            <Typography>
               <img
                 src={
-                  "/static/" +
+                  "/static/hero-icons/" +
                   this.props.name.replace(/\W/g, "").toLowerCase() +
                   ".jpg"
                 }

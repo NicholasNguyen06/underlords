@@ -12,7 +12,8 @@ import SearchHero from "./searchhero";
 import TeamBuilder from "./teambuilder";
 import Undo from "@material-ui/icons/Undo";
 import Button from "@material-ui/core/Button";
-import heroes from '../static/heroes';
+import heroes from "../static/heroes";
+import TeamCompositions from './teamcompositions'
 class HeroList extends React.Component {
   constructor(props) {
     super(props);
@@ -40,18 +41,18 @@ class HeroList extends React.Component {
   addToTeam = index => {
     let team = this.state.team;
     team.push(heroes.Heroes[index - 1]);
-    this.setState ({
+    this.setState({
       team: team
-    })
-  }
+    });
+  };
 
   removeFromTeam = index => {
     let team = this.state.team;
     team.splice(index - 1, 1);
-    this.setState ({
+    this.setState({
       team: team
-    })
-  }
+    });
+  };
 
   handleSearch = value => {
     if (value.length > 0) {
@@ -71,7 +72,7 @@ class HeroList extends React.Component {
   render() {
     var heroesList = Object.values(this.state.heroes).map((hero, index) => {
       return (
-        <Grid key={index} item xs={2}>
+        <Grid key={index} item xs>
           <HeroCard
             key={hero.id}
             name={hero.name}
@@ -84,26 +85,31 @@ class HeroList extends React.Component {
     });
     return (
       <Container maxWidth={"xl"}>
-        <Grid container spacing={3}>
-          <Grid item xs={5}>
-            <h2>
-              Alliances
-              <Button size="small" onClick={() => this.sortByClass("undo")}>
-                <Undo />
-              </Button>
-            </h2>
+        <Grid item xs={12}>
+          <h2>Team</h2>
+        </Grid>
+        <Grid item xs={7}>
+          <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
+        </Grid>
+        <Grid container>
+          <Grid item xs={12}>
+            <h2>Possible Strategy</h2>
           </Grid>
-          <Grid item xs={7}>
-            <h2>Team</h2>
+          <Grid item xs={12}>
+            <TeamCompositions team={this.state.team} />
           </Grid>
         </Grid>
-        <Grid container spacing={3}>
-          <Grid container item xs={5}>
-            <AllianceButtons onClick={this.sortByClass} />
-          </Grid>
-          <Grid item xs={7}>
-            <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
-          </Grid>
+
+        <Grid item xs={12}>
+          <h2>
+            Alliances
+            <Button size="small" onClick={() => this.sortByClass("undo")}>
+              <Undo />
+            </Button>
+          </h2>
+        </Grid>
+        <Grid item xs={12}>
+          <AllianceButtons onClick={this.sortByClass} />
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs={12}>

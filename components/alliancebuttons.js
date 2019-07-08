@@ -48,7 +48,7 @@ function AllianceButtons(props) {
           >
             <img
               src={
-                "/static/" +
+                "/static/alliance-icons/" +
                 alliance.type
                   .toString()
                   .replace(/\W/g, "")
