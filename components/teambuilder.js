@@ -1,5 +1,4 @@
 import React from "react";
-import HeroCard from "./herocard";
 import TeamCard from "./teamcard";
 import Grid from "@material-ui/core/Grid";
 

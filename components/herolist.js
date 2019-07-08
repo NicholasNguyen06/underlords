@@ -1,19 +1,16 @@
 import React from "react";
 import HeroCard from "./herocard";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import GridList from "@material-ui/core/GridList";
-import data from "../static/heroes.json";
 import AllianceButtons from "./alliancebuttons";
 import SearchHero from "./searchhero";
 import TeamBuilder from "./teambuilder";
 import Undo from "@material-ui/icons/Undo";
 import Button from "@material-ui/core/Button";
-import heroes from "../static/heroes";
-import TeamCompositions from './teamcompositions'
+import data from "../static/data/heroes";
+import TeamCompositions from "./teamcompositions";
+
 class HeroList extends React.Component {
   constructor(props) {
     super(props);
@@ -40,7 +37,7 @@ class HeroList extends React.Component {
 
   addToTeam = index => {
     let team = this.state.team;
-    team.push(heroes.Heroes[index - 1]);
+    team.push(data.Heroes[index - 1]);
     this.setState({
       team: team
     });
@@ -84,7 +81,7 @@ class HeroList extends React.Component {
       );
     });
     return (
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"lg"}>
         <Grid item xs={12}>
           <h2>Team</h2>
         </Grid>

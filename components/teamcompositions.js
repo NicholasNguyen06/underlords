@@ -1,8 +1,19 @@
 import React from 'react';
+import synergies from '../static/data/synergy';
 
-export default function TeamCompositions(props) {
+class TeamCompositions extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
 
-    return (
-        ""
-    )
+        }
+    }
+
+    render () {
+        return (
+            ""
+        )
+    }
 }
+
+export default TeamCompositions

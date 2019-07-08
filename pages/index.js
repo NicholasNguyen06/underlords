@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import HeroCard from "../components/herocard";
 import HeroList from "../components/herolist";
-import data from "../static/heroes.json";
+import data from "../static/data/heroes.json";
 
 const Home = () => (
   <div>

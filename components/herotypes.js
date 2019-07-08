@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 function HeroTypes(props) {
   const heroTypes = Object.values(props.classes).map((type, index) => {
     return (
-      <Grid key={index} item xs>
+      <Grid key={index} item xs={4}>
         <Button>
           <img
             src={"/static/alliance-icons/" + type.replace(/\W/g, "").toLowerCase() + ".jpg"}
@@ -21,9 +21,8 @@ function HeroTypes(props) {
   });
 
   return (
-    <Grid container>
+    <Grid container spacing={0}>
       {heroTypes}
-      <Grid item xs />
     </Grid>
   )
 }

@@ -1,9 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import alliances from "../static/alliances";
-import Undo from "@material-ui/icons/Undo";
+import alliances from "../static/data/alliances";
 import Popover from "@material-ui/core/Popover";
 import { makeStyles } from "@material-ui/core/styles";
 import AllianceDescriptions from "./alliancedescriptions";
@@ -13,9 +11,6 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(1)
-  },
-  root: {
-    
   }
 }));
 
@@ -38,7 +33,7 @@ function AllianceButtons(props) {
   var allianceButtons = Object.values(alliances.alliances).map(
     (alliance, index) => {
       return (
-        <Grid key={index} item xs={2}>
+        <Grid key={index} item xs>
           <Button
             onClick={() => props.onClick(alliance.type)}
             onMouseEnter={e => handlePopoverOpen(e, index)}
@@ -90,7 +85,7 @@ function AllianceButtons(props) {
   );
 
   return (
-      <Grid container item xs={12} spacing={0}>
+      <Grid container item xs={6} spacing={0}>
         {allianceButtons}
       </Grid>
   );
