@@ -9,11 +9,16 @@ import GridList from "@material-ui/core/GridList";
 import data from "../static/heroes.json";
 import AllianceButtons from "./alliancebuttons";
 import SearchHero from "./searchhero";
+import TeamBuilder from "./teambuilder";
+import Undo from "@material-ui/icons/Undo";
+import Button from "@material-ui/core/Button";
+import heroes from '../static/heroes';
 class HeroList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      heroes: this.props.heroes.Heroes
+      heroes: this.props.heroes.Heroes,
+      team: []
     };
   }
 
@@ -31,6 +36,14 @@ class HeroList extends React.Component {
       });
     }
   };
+
+  appendTeam = index => {
+    let team = this.state.team;
+    team.push(heroes.Heroes[index]);
+    this.setState ({
+      team: team
+    })
+  }
 
   handleSearch = value => {
     if (value.length > 0) {
@@ -55,7 +68,8 @@ class HeroList extends React.Component {
             key={index}
             name={type.name}
             classes={type.classes}
-            onClick={this.sortByClass}
+            onClick={this.appendTeam}
+            index={index}
           />
         </Grid>
       );
@@ -63,17 +77,27 @@ class HeroList extends React.Component {
     return (
       <Container maxWidth={"xl"}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <h2>Alliances</h2>
-            <style jsx>{`
-              h2 {
-                padding-left: 15px;
-              }
-            `}</style>
+          <Grid item xs={5}>
+            <h2>
+              Alliances
+              <Button size="small" onClick={() => this.sortByClass("undo")}>
+                <Undo />
+              </Button>
+            </h2>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={7}>
+            <h2>Team</h2>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid container item xs={5}>
             <AllianceButtons onClick={this.sortByClass} />
           </Grid>
+          <Grid item xs={7}>
+            <TeamBuilder team={this.state.team} />
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
             <SearchHero onInput={this.handleSearch} />
           </Grid>

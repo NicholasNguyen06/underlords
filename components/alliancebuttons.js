@@ -90,12 +90,7 @@ function AllianceButtons(props) {
   );
 
   return (
-      <Grid container xs={4} spacing={0}>
-        <Grid item xs>
-          <Button  size="small" onClick={() => props.onClick("undo")}>
-            <Undo />
-          </Button>
-        </Grid>
+      <Grid container item xs={12} spacing={0}>
         {allianceButtons}
       </Grid>
   );

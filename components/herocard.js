@@ -12,11 +12,15 @@ import HeroTypes from "./herotypes";
 class HeroCard extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      index: this.props.index
+    }
   }
 
   render() {
     return (
       <Card>
+        <div onClick={() => this.props.onClick(this.state.index)}>
         <CardActionArea>
           <CardContent>
             <Typography variant="body1" gutterBottom>
@@ -39,13 +43,13 @@ class HeroCard extends React.Component {
             }
           `}</style>
         </CardActionArea>
+        </div>
         <CardActions>
           <Grid container>
             <Typography variant="body2" color="textSecondary" component="span">
               <Grid container>
                 <HeroTypes
                   classes={this.props.classes}
-                  onClick={(e) => this.props.onClick(e)}
                 />
               </Grid>
             </Typography>
