@@ -1,5 +1,5 @@
 import React from 'react';
-import synergies from '../static/data/synergy';
+import data from '../static/data/synergy';
 
 class TeamCompositions extends React.Component {
     constructor(props) {
@@ -9,7 +9,17 @@ class TeamCompositions extends React.Component {
         }
     }
 
+    getSynergy = () => {
+        var comp = Object.values(data.synergies).Map((synergy, index) => {
+            return (
+                ""
+            )
+        })  
+        return comp;
+    };
+
     render () {
+        var synergies = () => getSynergy();
         return (
             ""
         )
