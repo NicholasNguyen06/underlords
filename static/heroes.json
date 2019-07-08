@@ -1,241 +1,301 @@
 {
     "Heroes": [{
+            "id": "1",
             "name": "Abaddon",
             "classes": ["Heartless", "Knight"]
         },
         {
+            "id": "2",
             "name": "Alchemist",
             "classes": ["Scrappy", "Warlocks"]
         },
         {
+            "id": "3",
             "name": "Anti-mage",
             "classes": ["Elusive", "Demon Hunter"]
         },
         {
+            "id": "4",
             "name": "Arc Warden",
             "classes": ["Primordial", "Shaman"]
         },
         {
+            "id": "5",
             "name": "Axe",
             "classes": ["Brawny", "Warrior"]
         },
         {
+            "id": "6",
             "name": "Batrider",
             "classes": ["Troll", "Knight"]
         },
         {
+            "id": "7",
             "name": "Beastmaster",
             "classes": ["Brawny", "Hunter"]
         },
         {
+            "id": "8",
             "name": "Bloodseeker",
             "classes": ["Human", "Assassin"]
         },
         {
+            "id": "9",
             "name": "Bounty Hunter",
             "classes": ["Scrappy", "Assassin"]
         },
         {
+            "id": "10",
             "name": "Chaos Knight",
             "classes": ["Demon", "Knight"]
         },
         {
+            "id": "11",
             "name": "Clockwerk",
             "classes": ["Scrappy", "Inventor"]
         },
         {
+            "id": "12",
             "name": "Crystal Maiden",
             "classes": ["Human", "Mage"]
         },
         {
+            "id": "13",
             "name": "Disruptor",
             "classes": ["Brawny", "Shaman"]
         },
         {
+            "id": "14",
             "name": "Doom",
             "classes": ["Demon", "Warrior"]
         },
         {
+            "id": "15",
             "name": "Dragon Knight",
             "classes": ["Human", "Dragon", "Knight"]
         },
         {
+            "id": "16",
             "name": "Drow Ranger",
             "classes": ["Heartless", "Hunter"]
         },
         {
+            "id": "17",
             "name": "Enchantress",
             "classes": ["Savage", "Druid"]
         },
         {
+            "id": "18",
             "name": "Enigma",
             "classes": ["Primordial", "Warlocks"]
         },
         {
+            "id": "19",
             "name": "Gyrocopter",
             "classes": ["Deadeye", "Inventor"]
         },
         {
+            "id": "20",
             "name": "Juggernaut",
             "classes": ["Brawny", "Warrior"]
         },
         {
+            "id": "21",
             "name": "Keeper Of The Light",
             "classes": ["Human", "Mage"]
         },
         {
+            "id": "22",
             "name": "Kunkka",
             "classes": ["Human", "Warrior"]
         },
         {
+            "id": "23",
             "name": "Lich",
             "classes": ["Heartless", "Mage"]
         },
         {
+            "id": "24",
             "name": "Lina",
             "classes": ["Human", "Mage"]
         },
         {
+            "id": "25",
             "name": "Lone Druid",
             "classes": ["Savage", "Druid"]
         },
         {
+            "id": "26",
             "name": "Luna",
             "classes": ["Elusive", "Knight"]
         },
         {
+            "id": "27",
             "name": "Lycan",
             "classes": ["Human", "Savage", "Warrior"]
         },
         {
+            "id": "28",
             "name": "Medusa",
             "classes": ["Scaled", "Hunter"]
         },
         {
+            "id": "29",
             "name": "Mirana",
             "classes": ["Elusive", "Hunter"]
         },
         {
+            "id": "30",
             "name": "Morphling",
             "classes": ["Primordial", "Assassin"]
         },
         {
+            "id": "31",
             "name": "Nature's Prophet",
             "classes": ["Elusive", "Druid"]
         },
         {
+            "id": "32",
             "name": "Necrophos",
             "classes": ["Heartless", "Warlocks"]
         },
         {
+            "id": "33",
             "name": "Ogre Magi",
             "classes": ["Blood Bound", "Mage"]
         },
         {
+            "id": "34",
             "name": "Omniknight",
             "classes": ["Human", "Knight"]
         },
         {
+            "id": "35",
             "name": "Phantom Assassin",
             "classes": ["Elusive", "Assassin"]
         },
         {
+            "id": "36",
             "name": "Puck",
             "classes": ["Elusive", "Dragon", "Mage"]
         },
         {
+            "id": "37",
             "name": "Pudge",
             "classes": ["Heartless", "Warrior"]
         },
         {
+            "id": "38",
             "name": "Queen Of Pain",
             "classes": ["Demon", "Assassin"]
         },
         {
+            "id": "39",
             "name": "Razor",
             "classes": ["Primordial", "Mage"]
         },
         {
+            "id": "40",
             "name": "Sand King",
             "classes": ["Savage", "Assassin"]
         },
         {
+            "id": "41",
             "name": "Shadow Fiend",
             "classes": ["Demon", "Warlocks"]
         },
         {
+            "id": "42",
             "name": "Shadow Shaman",
             "classes": ["Troll", "Shaman"]
         },
         {
+            "id": "43",
             "name": "Slardar",
             "classes": ["Scaled", "Warrior"]
         },
         {
+            "id": "44",
             "name": "Slark",
             "classes": ["Scaled", "Assassin"]
         },
         {
+            "id": "45",
             "name": "Sniper",
             "classes": ["Deadeye", "Hunter"]
         },
         {
+            "id": "46",
             "name": "Techies",
             "classes": ["Scrappy", "Inventor"]
         },
         {
+            "id": "47",
             "name": "Templar Assassin",
             "classes": ["Elusive", "Assassin"]
         },
         {
+            "id": "48",
             "name": "Terrorblade",
             "classes": ["Demon", "Demon Hunter"]
         },
         {
+            "id": "49",
             "name": "Tidehunter",
             "classes": ["Scaled", "Hunter"]
         },
         {
+            "id": "50",
             "name": "Timbersaw",
             "classes": ["Scrappy", "Inventor"]
         },
         {
+            "id": "51",
             "name": "Tinker",
             "classes": ["Scrappy", "Inventor"]
         },
         {
+            "id": "52",
             "name": "Tiny",
             "classes": ["Primordial", "Warrior"]
         },
         {
+            "id": "53",
             "name": "Treant Protector",
             "classes": ["Elusive", "Druid"]
         },
         {
+            "id": "54",
             "name": "Troll Warlord",
             "classes": ["Troll", "Warrior"]
         },
         {
+            "id": "55",
             "name": "Tusk",
             "classes": ["Savage", "Warrior"]
         },
         {
+            "id": "56",
             "name": "Venomancer",
             "classes": ["Savage", "Warlocks"]
         },
         {
+            "id": "57",
             "name": "Viper",
             "classes": ["Dragon", "Assassin"]
         },
         {
+            "id": "58",
             "name": "Warlock",
             "classes": ["Blood Bound", "Warlocks"]
         },
         {
+            "id": "59",
             "name": "Windranger",
             "classes": ["Elusive", "Hunter"]
         },
         {
+            "id": "60",
             "name": "Witch Doctor",
             "classes": ["Troll", "Warlocks"]
         }

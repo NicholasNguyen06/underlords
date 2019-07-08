@@ -13,14 +13,14 @@ class HeroCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      index: this.props.index
+      id: this.props.id
     }
   }
 
   render() {
     return (
       <Card>
-        <div onClick={() => this.props.onClick(this.state.index)}>
+        <div onClick={() => this.props.onClick(this.state.id)}>
         <CardActionArea>
           <CardContent>
             <Typography variant="body1" gutterBottom>

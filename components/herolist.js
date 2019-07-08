@@ -37,9 +37,17 @@ class HeroList extends React.Component {
     }
   };
 
-  appendTeam = index => {
+  addToTeam = index => {
     let team = this.state.team;
-    team.push(heroes.Heroes[index]);
+    team.push(heroes.Heroes[index - 1]);
+    this.setState ({
+      team: team
+    })
+  }
+
+  removeFromTeam = index => {
+    let team = this.state.team;
+    team.splice(index - 1, 1);
     this.setState ({
       team: team
     })
@@ -61,15 +69,15 @@ class HeroList extends React.Component {
   };
 
   render() {
-    var heroesList = Object.values(this.state.heroes).map((type, index) => {
+    var heroesList = Object.values(this.state.heroes).map((hero, index) => {
       return (
         <Grid key={index} item xs={2}>
           <HeroCard
-            key={index}
-            name={type.name}
-            classes={type.classes}
-            onClick={this.appendTeam}
-            index={index}
+            key={hero.id}
+            name={hero.name}
+            classes={hero.classes}
+            onClick={this.addToTeam}
+            id={hero.id}
           />
         </Grid>
       );
@@ -94,7 +102,7 @@ class HeroList extends React.Component {
             <AllianceButtons onClick={this.sortByClass} />
           </Grid>
           <Grid item xs={7}>
-            <TeamBuilder team={this.state.team} />
+            <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
           </Grid>
         </Grid>
         <Grid container spacing={3}>

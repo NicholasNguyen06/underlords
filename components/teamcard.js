@@ -2,8 +2,14 @@ import React from "react";
 
 export default function TeamCard(props) {
   return (
-    <div>
-      <img src={"/static/mini-icons/" + props.name.replace(/\W/g, "").toLowerCase() + "-icon.png"} />
+    <div onClick={() => props.onClick(props.index)}>
+      <img
+        src={
+          "/static/mini-icons/" +
+          props.name.replace(/\W/g, "").toLowerCase() +
+          "-icon.png"
+        }
+      />
       <style jsx>{`
         img {
           height: 40px;
