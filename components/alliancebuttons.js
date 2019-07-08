@@ -6,13 +6,16 @@ import alliances from "../static/alliances";
 import Undo from "@material-ui/icons/Undo";
 import Popover from "@material-ui/core/Popover";
 import { makeStyles } from "@material-ui/core/styles";
-
+import AllianceDescriptions from "./alliancedescriptions";
 const useStyles = makeStyles(theme => ({
   popover: {
     pointerEvents: "none"
   },
   paper: {
     padding: theme.spacing(1)
+  },
+  root: {
+    
   }
 }));
 
@@ -23,7 +26,6 @@ function AllianceButtons(props) {
   const open = Boolean(anchorEl);
 
   function handlePopoverOpen(event, popoverId) {
-    console.log("open", {anchorEl});
     setPopoverId(popoverId);
     setAnchorEl(event.currentTarget);
   }
@@ -33,14 +35,13 @@ function AllianceButtons(props) {
     setAnchorEl(null);
   }
 
-
   var allianceButtons = Object.values(alliances.alliances).map(
     (alliance, index) => {
       return (
-        <Grid key={index} item xs={1}>
+        <Grid key={index} item xs={2}>
           <Button
             onClick={() => props.onClick(alliance.type)}
-            onMouseEnter={(e) => handlePopoverOpen(e, index)}
+            onMouseEnter={e => handlePopoverOpen(e, index)}
             onMouseLeave={handlePopoverClose}
             aria-owns={open ? "mouse-over-popover" + index : undefined}
             aria-haspopup="true"
@@ -75,12 +76,12 @@ function AllianceButtons(props) {
             onClose={handlePopoverClose}
             disableRestoreFocus
           >
-                    <Typography>I use Popover.</Typography>
+            <AllianceDescriptions tiers={alliance.tiers} />
           </Popover>
           <style jsx>{`
             img {
-              height: 45px;
-              width: 45px;
+              height: 40px;
+              width: 40px;
             }
           `}</style>
         </Grid>
@@ -89,14 +90,14 @@ function AllianceButtons(props) {
   );
 
   return (
-    <Grid container spacing={0}>
-      <Grid item xs={1}>
-        <Button onClick={() => props.onClick("undo")}>
-          <Undo style={{ fontSize: 50 }} />
-        </Button>
+      <Grid container xs={4} spacing={0}>
+        <Grid item xs>
+          <Button  size="small" onClick={() => props.onClick("undo")}>
+            <Undo />
+          </Button>
+        </Grid>
+        {allianceButtons}
       </Grid>
-      {allianceButtons}
-    </Grid>
   );
 }
 

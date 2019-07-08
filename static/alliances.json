@@ -159,9 +159,9 @@
         {
             "type": "Warrior",
             "tiers": [
-                "All Warriors gain +10 Armor",
-                "All Warriors gain +15 Armor",
-                "All Warriors gain +25 Armor"
+                "(2) All Warriors gain +10 Armor",
+                "(4) All Warriors gain +15 Armor",
+                "(6) All Warriors gain +25 Armor"
             ]
         }
     ]
