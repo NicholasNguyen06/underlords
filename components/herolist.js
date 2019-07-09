@@ -94,17 +94,15 @@ class HeroList extends React.Component {
     });
     return (
       <Container maxWidth={"xl"}>
-        <Grid container>
-          <Grid item xs>
-            <h2>Team & Possible Strategy</h2>
-            <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
-          </Grid>
+        <Grid item xs>
+          <h2>Team</h2>
+          <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
         </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={6}>
+        <Grid item xs>
+            <h2>Strategy</h2>
             <TeamCompositions currentClasses={this.state.currentClasses} />
           </Grid>
-        </Grid>
+          
         <Grid item xs={12}>
           <h2>
             Alliances
@@ -113,7 +111,7 @@ class HeroList extends React.Component {
             </Button>
           </h2>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs>
           <AllianceButtons onClick={this.sortByClass} />
         </Grid>
         <Grid container spacing={3}>

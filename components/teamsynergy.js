@@ -106,8 +106,8 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired
 };
 
-function createData(description, rating, percent) {
-  return { description, rating, percent };
+function createData(description, rating, percent, id) {
+  return { description, rating, percent, id };
 }
 
 export default function TeamSynergy(props) {
@@ -116,10 +116,9 @@ export default function TeamSynergy(props) {
   for (let i in props.synergies) {
     let synergy = props.synergies[i];
     let description = synergy.author + " - " + synergy.description;
-    rows.push(createData(description, synergy.rating, "0%"));
+    rows.push(createData(description, synergy.rating, "0%", synergy.id));
   }
   rows.sort((a, b) => (a.rating < b.rating ? -1 : 1));
-  console.log(rows);
 
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
@@ -158,6 +157,7 @@ export default function TeamSynergy(props) {
                   </TableCell>
                   <TableCell align="right">{row.rating}</TableCell>
                   <TableCell align="right">{row.percent}</TableCell>
+                  <TableCell align="right" onClick={() => props.onClick(row.id)}>?</TableCell>
                 </TableRow>
               ))}
 

@@ -33,7 +33,7 @@ function AllianceButtons(props) {
   var allianceButtons = Object.values(alliances.alliances).map(
     (alliance, index) => {
       return (
-        <Grid key={index} item xs>
+        <Grid key={index} item xs={3} sm={2} lg={1}>
           <Button
             onClick={() => props.onClick(alliance.type)}
             onMouseEnter={e => handlePopoverOpen(e, index)}
@@ -85,7 +85,7 @@ function AllianceButtons(props) {
   );
 
   return (
-      <Grid container item xs={6} spacing={0}>
+      <Grid container item xs={12} sm={6} spacing={0}>
         {allianceButtons}
       </Grid>
   );
