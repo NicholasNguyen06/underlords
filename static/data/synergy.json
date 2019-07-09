@@ -2,8 +2,17 @@
     "synergies": [{
             "id": "1",
             "classes": ["Knight"],
-            "heroes": ["Abaddon", "Batrider", "Chaos Knight", "Dragon Knight", "Luna", "Omniknight"],
-            "subheroes": ["Viper", "Medusa", "Tide", "Enigma", "Necrophos"],
+            "heroes": [
+                "Abaddon",
+                "Batrider",
+                "Chaos Knight",
+                "Dragon Knight",
+                "Luna",
+                "Omniknight"
+            ],
+            "subheroes": [
+                ["Viper", "Medusa", "Tide", "Enigma", "Necrophos"]
+            ],
             "items": [],
             "notes": "If no mages replace Medusa for another Dragon Knight or another Enigma or any 2* legendary",
             "positioning": "",
@@ -14,8 +23,25 @@
         {
             "id": "2",
             "classes": ["Mage"],
-            "heroes": ["Crystal Maiden", "Keeper Of The Light", "Lich", "Lina", "Ogre Magi", "Puck", "Razor"],
-            "subheroes": ["Enigma", "Kunkka", "Necro", "Dragon Knight", "Shadow Fiend", "Warlock"],
+            "heroes": [
+                "Crystal Maiden",
+                "Keeper Of The Light",
+                "Lich",
+                "Lina",
+                "Ogre Magi",
+                "Puck",
+                "Razor"
+            ],
+            "subheroes": [
+                [
+                    "Enigma",
+                    "Kunkka",
+                    "Necro",
+                    "Dragon Knight",
+                    "Shadow Fiend",
+                    "Warlock"
+                ]
+            ],
             "items": ["Big-Time Contract"],
             "notes": "IF you have Big-Time Contract you can run the warlock and ogre magi",
             "positioning": "",
@@ -26,8 +52,21 @@
         {
             "id": "3",
             "classes": ["Hunter", "Warrior"],
-            "heroes": ["Beastmaster", "Drow", "Medusa", "Mirana", "Sniper", "Tidehunter", "Windranger", "Doom", "Kunkka", "Pudge"],
-            "subheroes": ["Enigma"],
+            "heroes": [
+                "Beastmaster",
+                "Drow",
+                "Medusa",
+                "Mirana",
+                "Sniper",
+                "Tidehunter",
+                "Windranger",
+                "Doom",
+                "Kunkka",
+                "Pudge"
+            ],
+            "subheroes": [
+                ["Enigma"]
+            ],
             "items": [],
             "notes": "",
             "positioning": "",
@@ -38,8 +77,20 @@
         {
             "id": "4",
             "classes": ["Warrior"],
-            "heroes": ["Doom", "Lycan", "Pudge", "Kunkka", "Troll Warlord", "Necrophos", "Enigma"],
-            "subheroes": ["Medusa", "Tidehunter", "Slardar", "Slark", "Witch Doctor", "Warlock", "Alchemist", ""],
+            "heroes": [
+                "Doom",
+                "Lycan",
+                "Pudge",
+                "Kunkka",
+                "Troll Warlord",
+                "Necrophos",
+                "Enigma"
+            ],
+            "subheroes": [
+                ["Medusa", "Tidehunter"],
+                ["Slardar", "Slark"],
+                ["Witch Doctor", "Warlock", "Alchemist"]
+            ],
             "items": [],
             "notes": "Needs Fall from Grace item as damage is very low otherwise",
             "positioning": "",
@@ -50,15 +101,52 @@
         {
             "id": "5",
             "classes": ["Demon"],
-            "heroes": ["Doom", "Lycan", "Pudge", "Kunkka", "Troll Warlord", "Necrophos", "Enigma"],
-            "subheroes": ["Medusa", "Tidehunter", "Slardar", "Slark", "Witch Doctor", "Warlock", "Alchemist", ""],
+            "heroes": [
+                "Doom",
+                "Lycan",
+                "Pudge",
+                "Kunkka",
+                "Troll Warlord",
+                "Necrophos",
+                "Enigma"
+            ],
+            "subheroes": [
+                ["Medusa", "Tidehunter"],
+                ["Slardar", "Slark"],
+                ["Witch Doctor", "Warlock", "Alchemist"]
+            ],
             "items": ["Strange Bedfellows"],
             "notes": "Needs Strange Bedfellows item as damage is very low otherwise",
             "positioning": "",
             "author": "bigbozzgames",
             "description": "All Demons",
             "rating": "2"
+        },
+        {
+            "id": "6",
+            "classes": ["Warrior", "Troll", "Warlock"],
+            "heroes": [
+                "Pudge",
+                "Lycan",
+                "Doom",
+                "Kunkka",
+                "Tiny",
+                "Troll Warlord",
+                "Witch Doctor",
+                "Necrophos"
+            ],
+            "subheroes": [
+                ["Medusa", "Tidehunter"],
+                ["Crystal Maiden", "Omniknight", "Dragon Knight"],
+                ["Enigma"],
+                ["Batrider", "Shadow Shaman", "Disruptor", "Alchemist"]
+            ],
+            "items": [],
+            "notes": "",
+            "positioning": "",
+            "author": "reddit",
+            "description": "6 Warriors - 2 Trolls - 2 Warlocks - 2 Heartless - 1 Demon",
+            "rating": "2"
         }
-
     ]
 }

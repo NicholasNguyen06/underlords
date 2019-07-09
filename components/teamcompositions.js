@@ -40,18 +40,18 @@ class TeamCompositions extends React.Component {
     if (this.state.currentComposition == null) {
       return (
         <Grid container spacing={3}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <TeamSynergy synergies={synergies} onClick={this.loadComposition} />
           </Grid>
         </Grid>
       );
     }
     return (
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
+      <Grid container>
+        <Grid item xs={12} sm={6}>
           <TeamSynergy synergies={synergies} onClick={this.loadComposition} />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <TeamDescription composition={this.state.currentComposition} />
         </Grid>
       </Grid>
