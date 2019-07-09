@@ -13,20 +13,15 @@ class TeamBuilder extends React.Component {
   render() {
     var team = Object.values(this.props.team).map((hero, index) => {
       return (
-        <Grid key={index} item xs={1}>
-          <TeamCard
-            name={hero.name}
-            index={index + 1}
-            onClick={this.props.onClick}
-          />
-        </Grid>
+        <TeamCard
+          key={hero.id}
+          name={hero.name}
+          index={index + 1}
+          onClick={this.props.onClick}
+        />
       );
     });
-    return (
-      <Grid container spacing={3}>
-        {team}
-      </Grid>
-    );
+    return <Grid container>{team}</Grid>;
   }
 }
 

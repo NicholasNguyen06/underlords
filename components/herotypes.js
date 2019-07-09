@@ -21,7 +21,7 @@ function HeroTypes(props) {
   });
 
   return (
-    <Grid container spacing={0}>
+    <Grid container spacing={0}>  
       {heroTypes}
     </Grid>
   )

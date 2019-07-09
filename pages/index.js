@@ -15,7 +15,6 @@ const Home = () => (
 
     <div className="hero">
       <h1 className="title">UL Tooltip</h1>
-
     </div>
     <Grid container>
       <HeroList heroes={data} />

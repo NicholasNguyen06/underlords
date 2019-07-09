@@ -50,21 +50,11 @@ class HeroList extends React.Component {
     });
   };
 
+  // TODO: Possibly just rebuild entire currentClasses instead of removing. Remove duplicates,etc.
   removeFromTeam = index => {
     let currentClasses = this.state.currentClasses;
-    let hero = this.state.team[index - 1];
-    let newClasses = [];
-    for (var i in hero.classes) {
-      currentClasses.reduce((unique, o) => {
-        if (uni)
-        console.log("Unique: " + unique);
-      });
-    }
-    /*
-    for (var i in hero.classes) {
-      currentClasses = currentClasses.filter(v => v !== hero.classes[i]);
-    }
-    */
+    let id = index == 1 ? index - 1 : index;
+    currentClasses.splice(id, 2);
     let team = this.state.team;
     team.splice(index - 1, 1);
     this.setState({
@@ -103,19 +93,16 @@ class HeroList extends React.Component {
       );
     });
     return (
-      <Container maxWidth={"lg"}>
-        <Grid item xs={12}>
-          <h2>Team</h2>
-        </Grid>
-        <Grid item xs={7}>
-          <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
-        </Grid>
+      <Container maxWidth={"xl"}>
         <Grid container>
-          <Grid item xs={12}>
-            <h2>Possible Strategy</h2>
+          <Grid item xs>
+            <h2>Team & Possible Strategy</h2>
+            <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
           </Grid>
-          <Grid item xs={12}>
-            <TeamCompositions team={this.state.team} />
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={6}>
+            <TeamCompositions currentClasses={this.state.currentClasses} />
           </Grid>
         </Grid>
         <Grid item xs={12}>
