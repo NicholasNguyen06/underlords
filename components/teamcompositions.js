@@ -10,16 +10,22 @@ class TeamCompositions extends React.Component {
     }
 
     getSynergy = () => {
-        var comp = Object.values(data.synergies).Map((synergy, index) => {
+        let synergies = [];
+        let currentClasses = [];
+        for (let i in data.synergies) {
+            var synergy = data.synergies[i];
+            var synergyClass = data.synergies[i].classes;
+        }
+        var comp = Object.values(data.synergies).map((synergy, index) => {
             return (
                 ""
             )
-        })  
+        })
         return comp;
     };
 
-    render () {
-        var synergies = () => getSynergy();
+    render() {
+        var synergies = this.getSynergy();
         return (
             ""
         )

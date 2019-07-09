@@ -16,7 +16,8 @@ class HeroList extends React.Component {
     super(props);
     this.state = {
       heroes: this.props.heroes.Heroes,
-      team: []
+      team: [],
+      currentClasses: []
     };
   }
 
@@ -37,17 +38,38 @@ class HeroList extends React.Component {
 
   addToTeam = index => {
     let team = this.state.team;
+    let currentClasses = this.state.currentClasses;
+    let hero = data.Heroes[index - 1];
+    for (var i in hero.classes) {
+      currentClasses.push(hero.classes[i]);
+    }
     team.push(data.Heroes[index - 1]);
     this.setState({
-      team: team
+      team: team,
+      currentClasses: currentClasses
     });
   };
 
   removeFromTeam = index => {
+    let currentClasses = this.state.currentClasses;
+    let hero = this.state.team[index - 1];
+    let newClasses = [];
+    for (var i in hero.classes) {
+      currentClasses.reduce((unique, o) => {
+        if (uni)
+        console.log("Unique: " + unique);
+      });
+    }
+    /*
+    for (var i in hero.classes) {
+      currentClasses = currentClasses.filter(v => v !== hero.classes[i]);
+    }
+    */
     let team = this.state.team;
     team.splice(index - 1, 1);
     this.setState({
-      team: team
+      team: team,
+      currentClasses: currentClasses
     });
   };
 
@@ -96,7 +118,6 @@ class HeroList extends React.Component {
             <TeamCompositions team={this.state.team} />
           </Grid>
         </Grid>
-
         <Grid item xs={12}>
           <h2>
             Alliances
@@ -113,10 +134,8 @@ class HeroList extends React.Component {
             <SearchHero onInput={this.handleSearch} />
           </Grid>
         </Grid>
-        <Grid>
-          <GridList cols={12} cellHeight={280}>
-            {heroesList}
-          </GridList>
+        <Grid container spacing={1}>
+          {heroesList}
         </Grid>
       </Container>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function TeamCard(props) {
-    console.log(props.name);
   return (
     <div onClick={() => props.onClick(props.index)}>
       <img
