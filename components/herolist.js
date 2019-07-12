@@ -81,7 +81,7 @@ class HeroList extends React.Component {
   render() {
     var heroesList = Object.values(this.state.heroes).map((hero, index) => {
       return (
-        <Grid key={index} item xs>
+        <Grid key={index} item xs sm={2} lg={1}>
           <HeroCard
             key={hero.id}
             name={hero.name}
@@ -99,10 +99,10 @@ class HeroList extends React.Component {
           <TeamBuilder team={this.state.team} onClick={this.removeFromTeam} />
         </Grid>
         <Grid item xs>
-            <h2>Strategy</h2>
-            <TeamCompositions currentClasses={this.state.currentClasses} />
-          </Grid>
-          
+          <h2>Strategy</h2>
+          <TeamCompositions currentClasses={this.state.currentClasses} />
+        </Grid>
+
         <Grid item xs={12}>
           <h2>
             Alliances

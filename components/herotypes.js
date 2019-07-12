@@ -11,8 +11,8 @@ function HeroTypes(props) {
           />
           <style jsx>{`
             img {
-              height: 40px;
-              width: 40px;
+              height: 25px;
+              width: 25px;
             }
           `}</style>
         </Button>

@@ -34,6 +34,21 @@ function AllianceButtons(props) {
     (alliance, index) => {
       return (
         <Grid key={index} item xs={3} sm={2} lg={1}>
+        <Button
+            onClick={() => props.onClick(alliance.type)}
+          >
+            <img
+              src={
+                "/static/alliance-icons/" +
+                alliance.type
+                  .toString()
+                  .replace(/\W/g, "")
+                  .toLowerCase() +
+                ".jpg"
+              }
+            />
+          </Button>
+          {/*
           <Button
             onClick={() => props.onClick(alliance.type)}
             onMouseEnter={e => handlePopoverOpen(e, index)}
@@ -73,6 +88,7 @@ function AllianceButtons(props) {
           >
             <AllianceDescriptions tiers={alliance.tiers} />
           </Popover>
+          */}
           <style jsx>{`
             img {
               height: 40px;
