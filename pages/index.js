@@ -7,8 +7,9 @@ import Grid from "@material-ui/core/Grid";
 import HeroCard from "../components/herocard";
 import HeroList from "../components/herolist";
 import data from "../static/data/heroes.json";
+import fetch from "isomorphic-unfetch";
 
-const Home = () => (
+const Home = props => (
   <div>
     <Head title="Home" />
     <Nav />
@@ -19,6 +20,7 @@ const Home = () => (
     <Grid container>
       <HeroList heroes={data} />
     </Grid>
+    <div>{console.log(props.user)}</div>
     <style jsx>{`
       .hero {
         width: 100%;
@@ -68,5 +70,15 @@ const Home = () => (
     `}</style>
   </div>
 );
+
+Home.getInitialProps = async function(context) {
+  const id = 1;
+  const res = await fetch(`http://127.0.0.1:3001/users/1`);
+  const user = await res.json();
+
+  console.log(user);
+
+  return { user };
+};
 
 export default Home;
