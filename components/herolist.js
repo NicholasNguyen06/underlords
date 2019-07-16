@@ -17,7 +17,9 @@ class HeroList extends React.Component {
     this.state = {
       heroes: this.props.heroes.Heroes,
       team: [],
-      currentClasses: []
+      currentClasses: [],
+      currentComposition: null,
+      synergies: []
     };
   }
 
@@ -48,6 +50,7 @@ class HeroList extends React.Component {
       team: team,
       currentClasses: currentClasses
     });
+    this.getSynergy();
   };
 
   // TODO: Possibly just rebuild entire currentClasses instead of removing. Remove duplicates,etc.
@@ -61,6 +64,7 @@ class HeroList extends React.Component {
       team: team,
       currentClasses: currentClasses
     });
+    this.getSynergy();
   };
 
   handleSearch = value => {
@@ -78,10 +82,42 @@ class HeroList extends React.Component {
     }
   };
 
+  getSynergy = () => {
+    let currentClasses = Array.from(new Set(this.state.currentClasses));
+    let composition = [];
+    fetch(`http://127.0.0.1:3001/synergies`)
+      .then(res => res.json())
+      .then(
+        results => {
+          for (let i in results) {
+            var synergyClasses = results[0].data.classes;
+            if (synergyClasses.some(v => currentClasses.indexOf(v) !== -1)) {
+              composition.push(results[0].data);
+            }
+          }
+          this.setState({
+            synergies: composition
+          });
+        },
+        error => {
+          console.log("Error: ", error);
+        }
+      );
+  };
+
+  loadComposition = id => {
+    let composition = this.state.synergies.find(synergy => {
+      return synergy.id === id;
+    });
+    this.setState({
+      currentComposition: composition
+    });
+  };
+
   render() {
     var heroesList = Object.values(this.state.heroes).map((hero, index) => {
       return (
-        <Grid key={index} item xs sm={2} lg={1}>
+        <Grid key={index} item xs sm={3} lg={2} xl={1}>
           <HeroCard
             key={hero.id}
             name={hero.name}
@@ -100,7 +136,12 @@ class HeroList extends React.Component {
         </Grid>
         <Grid item xs>
           <h2>Strategy</h2>
-          <TeamCompositions currentClasses={this.state.currentClasses} />
+          <TeamCompositions
+            currentClasses={this.state.currentClasses}
+            currentComposition={this.state.currentComposition}
+            synergies={this.state.synergies}
+            onClick={this.loadComposition}
+          />
         </Grid>
 
         <Grid item xs={12}>

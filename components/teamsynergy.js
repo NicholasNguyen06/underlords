@@ -145,6 +145,10 @@ export default function TeamSynergy(props) {
               <TableCell>Name</TableCell>
               <TableCell align="right">Rating.</TableCell>
               <TableCell align="right">% Success</TableCell>
+              <TableCell align="right"></TableCell>
+              <TableCell align="right"></TableCell>
+              <TableCell align="right"></TableCell>
+
             </TableRow>
           </TableHead>
           <TableBody>
@@ -157,7 +161,12 @@ export default function TeamSynergy(props) {
                   </TableCell>
                   <TableCell align="right">{row.rating}</TableCell>
                   <TableCell align="right">{row.percent}</TableCell>
-                  <TableCell align="right" onClick={() => props.onClick(row.id)}>?</TableCell>
+                  <TableCell
+                    align="right"
+                    onClick={() => props.onClick(row.id)}
+                  >
+                    ?
+                  </TableCell>
                 </TableRow>
               ))}
 
