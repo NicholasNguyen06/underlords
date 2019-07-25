@@ -5,7 +5,7 @@ import Nav from "../components/nav";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import HeroCard from "../components/herocard";
-import HeroList from "../components/herolist";
+import Dashboard from "../components/dashboard";
 import data from "../static/data/heroes.json";
 import fetch from "isomorphic-unfetch";
 
@@ -18,7 +18,7 @@ const Home = props => (
       <h1 className="title">UL Tooltip</h1>
     </div>
     <Grid container>
-      <HeroList heroes={data} />
+      <Dashboard heroes={data}/>
     </Grid>
     <style jsx>{`
       .hero {

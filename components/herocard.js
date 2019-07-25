@@ -18,6 +18,7 @@ class HeroCard extends React.Component {
   }
 
   render() {
+
     return (
       <Card>
         <div onClick={() => this.props.onClick(this.state.id)}>
