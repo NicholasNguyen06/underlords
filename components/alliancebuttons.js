@@ -16,19 +16,6 @@ const useStyles = makeStyles(theme => ({
 
 function AllianceButtons(props) {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [popoverId, setPopoverId] = React.useState(null);
-  const open = Boolean(anchorEl);
-
-  function handlePopoverOpen(event, popoverId) {
-    setPopoverId(popoverId);
-    setAnchorEl(event.currentTarget);
-  }
-
-  function handlePopoverClose() {
-    setPopoverId(null);
-    setAnchorEl(null);
-  }
 
   var allianceButtons = Object.values(alliances.alliances).map(
     (alliance, index) => {
@@ -48,47 +35,6 @@ function AllianceButtons(props) {
               }
             />
           </Button>
-          {/*
-          <Button
-            onClick={() => props.onClick(alliance.type)}
-            onMouseEnter={e => handlePopoverOpen(e, index)}
-            onMouseLeave={handlePopoverClose}
-            aria-owns={open ? "mouse-over-popover" + index : undefined}
-            aria-haspopup="true"
-          >
-            <img
-              src={
-                "/static/alliance-icons/" +
-                alliance.type
-                  .toString()
-                  .replace(/\W/g, "")
-                  .toLowerCase() +
-                ".jpg"
-              }
-            />
-          </Button>
-          <Popover
-            id={"mouse-over-popover" + index}
-            className={classes.popover}
-            classes={{
-              paper: classes.paper
-            }}
-            open={popoverId === index}
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left"
-            }}
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left"
-            }}
-            onClose={handlePopoverClose}
-            disableRestoreFocus
-          >
-            <AllianceDescriptions tiers={alliance.tiers} />
-          </Popover>
-          */}
           <style jsx>{`
             img {
               height: 40px;

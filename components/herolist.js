@@ -10,6 +10,7 @@ import Undo from "@material-ui/icons/Undo";
 import Button from "@material-ui/core/Button";
 import data from "../static/data/heroes";
 import TeamCompositions from "./teamcompositions";
+import AddUser from "./adduser/adduser"
 
 class HeroList extends React.Component {
   constructor(props) {

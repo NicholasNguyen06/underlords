@@ -23,7 +23,7 @@ class TeamCompositions extends React.Component {
       );
     }
     return (
-      <Grid container>
+      <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TeamSynergy
             synergies={this.props.synergies}
