@@ -164,7 +164,7 @@ class Dashboard extends React.Component {
           </Grid>
         </Grid>
         <Grid container spacing={1}>
-            <HeroList heroes={data.Heroes} onClick={this.addToTeam} />
+            <HeroList heroes={this.state.heroes} onClick={this.addToTeam} />
         </Grid>
       </Container>
     );
