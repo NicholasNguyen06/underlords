@@ -10,6 +10,7 @@ import TeamBuilder from "./teambuilder";
 import Undo from "@material-ui/icons/Undo";
 import Button from "@material-ui/core/Button";
 import data from "../static/data/heroes";
+import synergyData from "../static/data/synergy";
 import TeamCompositions from "./teamcompositions";
 import AddUser from "./adduser/adduser";
 
@@ -85,6 +86,7 @@ class Dashboard extends React.Component {
     }
   };
 
+  /*
   getSynergy = () => {
     let currentClasses = Array.from(new Set(this.state.currentClasses));
     let composition = [];
@@ -107,6 +109,33 @@ class Dashboard extends React.Component {
         }
       );
   };
+  */
+
+ getSynergy = () => {
+   console.log(synergyData.synergies);
+  let currentClasses = Array.from(new Set(this.state.currentClasses));
+  let composition = [];
+  for (let i in synergyData.synergies) {
+    var synergy = synergyData.synergies[i];
+    var synergyClasses = synergyData.synergies[i].classes;
+    if (synergyClasses.some(v => currentClasses.indexOf(v) !== -1)) {
+      composition.push(synergy);
+    }
+  }
+  console.log(synergyData.synergies,composition);
+  this.setState({
+    synergies: composition
+  });
+};
+
+loadComposition = id => {
+  let composition = data.synergies.find(synergy => {
+      return synergy.id === id;
+  })
+  this.setState({
+    currentComposition: composition
+  });
+};
 
   loadComposition = id => {
     let composition = this.state.synergies.find(synergy => {
