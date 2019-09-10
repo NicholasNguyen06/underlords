@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 import Table from "@material-ui/core/Table";
 import TableHead from "@material-ui/core/TableHead";
 import TableBody from "@material-ui/core/TableBody";
@@ -14,6 +15,8 @@ import FirstPageIcon from "@material-ui/icons/FirstPage";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import LastPageIcon from "@material-ui/icons/LastPage";
+import InfoSharpIcon from '@material-ui/icons/InfoSharp';
+
 
 const useStyles1 = makeStyles(theme => ({
   root: {
@@ -165,7 +168,9 @@ export default function TeamSynergy(props) {
                     align="right"
                     onClick={() => props.onClick(row.id)}
                   >
-                    ?
+                  <Button>
+                  <InfoSharpIcon color="primary"/>
+                  </Button>
                   </TableCell>
                 </TableRow>
               ))}
